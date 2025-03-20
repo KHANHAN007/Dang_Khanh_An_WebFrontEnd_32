@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phóng to ảnh</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .gallery {
+            display: flex;
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 150px;
+            cursor: pointer;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .overlay img {
+            width: 80%;
+            max-width: 600px;
+            transform: scale(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .overlay.show img {
+            transform: scale(1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gallery">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXWHoaOgmiq3UVn-1sc7YEyoajlH-tu2cd5w&s"
+            onclick="showImage(this)">
+        <img src="https://tranhdep.com/wp-content/uploads/2021/10/IMG_3279.jpg" onclick="showImage(this)">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb3fWFhwqBA-9VkhlRFW4WB-N9TAs0MBwDnw&s"
+            onclick="showImage(this)">
+    </div>
+    <div class="overlay" onclick="hideImage()">
+        <img id="largeImage">
+    </div>
+    <script src="Ex07.js">
+    </script>
+
+</body>
+
+</html>

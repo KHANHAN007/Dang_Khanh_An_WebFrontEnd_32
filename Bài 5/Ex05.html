@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .input {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            flex: 1;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button.add {
+            background: green;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        li {
+            padding: 10px 5px;
+            border-bottom: 1px solid #ccc;
+            text-align: left;
+            list-style-type: none;
+            color: black;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .todoList {
+            padding: 0px;
+        }
+
+        .close {
+            position: relative;
+            right: 0;
+            top: 0;
+            padding: 5px 10px;
+            background-color: red;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .close:hover {
+            background-color: #ea6a61;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>To-Do Lish K24_PTIT</h2>
+    <div class="container">
+        <div id="input">
+            <input type="text" name="" id="taskInput" placeholder="Nhập nhiệm vụ..." />
+            <button onclick="addTask()" class="add">Thêm</button>
+        </div>
+        <ul id="todoList" class="todoList">
+            <li>sdfadsf <span class="close">×</span></li>
+            <li>sdfadsf <span class="close">×</span></li>
+        </ul>
+    </div>
+    </div>
+    <script src="Ex05.js"></script>
+</body>
+
+</html>

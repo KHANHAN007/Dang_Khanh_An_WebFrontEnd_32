@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 400px;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            background: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="text">Chữ sẽ thay đổi kích thước khi bấm nút</div>
+        <div class="btn-container">
+            <div class="btn" onclick="large()">+</div>
+            <div class="btn" onclick="litle()">-</div>
+        </div>
+    </div>
+    <script src="Ex06.js"></script>
+</body>
+
+</html>

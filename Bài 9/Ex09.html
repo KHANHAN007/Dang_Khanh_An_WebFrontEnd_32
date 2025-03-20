@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar with Darkening Background</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            transition: background-color 0.3s ease-in-out;
+            background-color: rgb(255, 255, 255);
+            color: black;
+        }
+
+        h2 {
+            transition: color 0.3s ease-in-out;
+        }
+
+        .progress-container {
+            width: 50%;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            width: 30%;
+            height: 20px;
+            background-color: lightgreen;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #66aaff;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #5599ee;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="title">Progress Bar with Background Effect</h2>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <button class="btn" onclick="changeProgress(-10)">Giảm tiến trình</button>
+    <button class="btn" onclick="changeProgress(10)">Tăng tiến trình</button>
+    <script src="Ex09.js">
+    </script>
+
+</body>
+
+</html>
